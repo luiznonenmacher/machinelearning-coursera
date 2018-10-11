@@ -17,11 +17,9 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
-
-
-
-
-
+    distances = (X * theta) - y;
+    theta_diff = alpha * (distances' * X) / m;
+    theta = theta - theta_diff';
 
     % ============================================================
 

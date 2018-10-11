@@ -79,11 +79,47 @@ X = [ones(m, 1) X];
 % Hint: At prediction, make sure you do the same feature normalization.
 %
 
+
 fprintf('Running gradient descent ...\n');
 
+% Choosing initial alpha
+num_iters = 50
+theta = zeros(3, 1)
+
+[theta, J1_history] = gradientDescentMulti(X, y, theta, 0.001, num_iters);
+theta = zeros(3, 1);
+[theta, J2_history] = gradientDescentMulti(X, y, theta, 0.003, num_iters);
+theta = zeros(3, 1);
+[theta, J3_history] = gradientDescentMulti(X, y, theta, 0.01, num_iters);
+theta = zeros(3, 1);
+[theta, J4_history] = gradientDescentMulti(X, y, theta, 0.03, num_iters);
+theta = zeros(3, 1);
+[theta, J5_history] = gradientDescentMulti(X, y, theta, 0.1, num_iters);
+theta = zeros(3, 1);
+[theta, J6_history] = gradientDescentMulti(X, y, theta, 0.3, num_iters);
+theta = zeros(3, 1);
+[theta, J7_history] = gradientDescentMulti(X, y, theta, 1, num_iters);
+theta = zeros(3, 1);
+
+figure
+plot(1:numel(J1_history), J1_history, '-k', 'LineWidth', 2)
+hold on;
+plot(1:numel(J2_history), J2_history, '-r', 'LineWidth', 2)
+plot(1:numel(J3_history), J3_history, '-g', 'LineWidth', 2)
+plot(1:numel(J4_history), J4_history, '-b', 'LineWidth', 2)
+plot(1:numel(J5_history), J5_history, '-y', 'LineWidth', 2)
+plot(1:numel(J6_history), J6_history, '-m', 'LineWidth', 2)
+plot(1:numel(J7_history), J7_history, '-c', 'LineWidth', 2)
+
+fprintf('Program paused. Press enter to continue.\n');
+pause;
+
+close all
+
 % Choose some alpha value
-alpha = 0.01;
+alpha = 0.3;
 num_iters = 400;
+
 
 % Init Theta and Run Gradient Descent 
 theta = zeros(3, 1);
@@ -92,6 +128,8 @@ theta = zeros(3, 1);
 % Plot the convergence graph
 figure;
 plot(1:numel(J_history), J_history, '-b', 'LineWidth', 2);
+
+
 xlabel('Number of iterations');
 ylabel('Cost J');
 
@@ -104,7 +142,7 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
-price = 0; % You should change this
+price = [1 (([1650 3] - mu) ./ sigma)] * theta; % You should change this
 
 
 % ============================================================
@@ -149,7 +187,7 @@ fprintf('\n');
 
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
-price = 0; % You should change this
+price = [1 1650 3] * theta; % You should change this
 
 
 % ============================================================
