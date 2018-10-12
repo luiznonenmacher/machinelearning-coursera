@@ -30,6 +30,7 @@ X_norm = X_norm - mu;
 sigma = std(X_norm);
 X_norm = X_norm ./ sigma;
 
+
 % ============================================================
 
 end
