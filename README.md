@@ -9,7 +9,7 @@ The exercises are:
 
 **2 - Logistic Regression ([pdf](https://github.com/luiznonenmacher/machinelearning-coursera/blob/master/ex2/ex2.pdf), [notebook](https://github.com/luiznonenmacher/machinelearning-coursera/blob/master/ex2/Logistic%20Regression.ipynb)):** Implementing a logistic regression model and a regularized logistic regression for classification. 
 
-**3 - Multi-class Classification and Neural Networks ([pdf](https://github.com/luiznonenmacher/machinelearning-coursera/blob/master/ex3/ex3.pdf), [notebook]https://github.com/luiznonenmacher/machinelearning-coursera/blob/master/ex3/Multiclass%20Classification%20and%20Neural%20Networks.ipynb)):** Implementing logistic regression and a trained neural network to multi-class classification.
+**3 - Multi-class Classification and Neural Networks ([pdf](https://github.com/luiznonenmacher/machinelearning-coursera/blob/master/ex3/ex3.pdf), [notebook](https://github.com/luiznonenmacher/machinelearning-coursera/blob/master/ex3/Multiclass%20Classification%20and%20Neural%20Networks.ipynb)):** Implementing logistic regression and a trained neural network to multi-class classification.
 
 **4 - Neural Networks Learning ([pdf](https://github.com/luiznonenmacher/machinelearning-coursera/blob/master/ex4/ex4.pdf), [notebook](https://github.com/luiznonenmacher/machinelearning-coursera/blob/master/ex4/Neural%20Networks%20Learning.ipynb)):** Training a neural network for multi-class classification.
 
