@@ -40,30 +40,31 @@ Theta_grad = zeros(size(Theta));
 %                     partial derivatives w.r.t. to each element of Theta
 %
 
-J = (sum(sum(R.* ((X * Theta') - Y).^2))) / 2;
+
+errors = R.* ((X * Theta') - Y);
+squaredErrors = errors .^2;
+J = (1/2) * sum(sum(squaredErrors)) + ((lambda / 2) * sum(Theta(:) .^ 2)) + ((lambda / 2) * sum(X(:) .^ 2));
+
+X_grad = errors * Theta .+ (lambda .* X);
+Theta_grad = errors' * X .+ (lambda .* Theta);
+
+%J = (sum(sum(R.* ((X * Theta') - Y).^2))) / 2;
+
+%X_grad = (X * Theta' - Y)
 
 
-for i=1:num_users
-	idx = find(R(i, :)==1);
-	Thetatemp = Theta(idx,:);
-	Ytemp = Y(i, idx);
-	Xgrad(i, :) = (X(i,:) * Thetatemp' - Ytemp) * Thetatemp;
-end
+%for i=1:num_movies
+%	idx = find(R(i, :)==1) % All users that rated movie i;
+%	Thetatemp = Theta(idx,:);
+%	Ytemp = Y(i, idx);
+%	Xgrad(i, :) = (X(i,:) * Thetatemp' - Ytemp) * Thetatemp;
+%end
 
-for j=1:num_features
-	idx = find(R(:, j)==1);
-	Ytemp = Y(idx,j);
-	Xtemp = X(idx, j);
-	Theta_grad()
-
-
-
-
-
-
-
-
-
+%for j=1:num_users
+%	idx = find(R(:, j)==1) % All movies rated by user j;
+%	Ytemp = Y(idx,j);
+%	Xtemp = X(idx, :);
+%	Theta_grad()
 
 % =============================================================
 
