@@ -1,7 +1,7 @@
 # machinelearning-coursera
-This repository contains the exercises required for the Machine Learning course on [Coursera](https://www.coursera.org/learn/machine-learning) by Andrew Ng.
+This repository contains the Python implementations of the exercises required for the Machine Learning course on [Coursera](https://www.coursera.org/learn/machine-learning) by Andrew Ng. In the Coursera course, the exercises are done in Octave. In this repository there are the original Octave implementations and a implementation in Python using Pandas, Numpy and sklearn.  
 
-The repository are divided by folder, with each folder containing one exercise. Inside each folder there's a pdf explaining the exercise, a Jupyter Notebook containing the implementation in Pyton and several functions implementing the exercise in Octave (as required by the course).
+This repository are divided by folder, with each folder containing one exercise. Inside each folder there's a pdf explaining the exercise, a Jupyter Notebook containing the implementation in Pyton and several functions implementing the exercise in Octave (as required by the course).
 
 The exercises are:
 
